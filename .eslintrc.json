@@ -1,0 +1,37 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": ["@typescript-eslint", "react"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".jsx", ".tsx", ".js", ".ts"]
+      }
+    ],
+    "import/no-unresolved": 0,
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never"
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "document": false
+  }
+}
