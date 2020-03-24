@@ -1,7 +1,41 @@
 .InitPageHeader {
-  display: flex;
-  justify-content: space-between;
-  .title {
-    margin-left: 30px;
+  height: 100%;
+
+  .backImg {
+    background-image: url('../../asset/init_background.jpg');
+    background-size: cover;
+    height: 85%;
+    .logoLogin {
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        margin-left: 3rem;
+        margin-top: 1.5rem;
+        font-size: 3rem;
+        font-weight: bold;
+        color: red;
+      }
+      .login {
+        color: red;
+      }
+    }
+
+    .mainTextBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: 20%;
+      .text1,
+      .text2 {
+        color: white;
+        font-size: 3.7rem;
+        font-weight: bold;
+      }
+      .text2 {
+        margin-top: 2rem;
+      }
+    }
   }
 }
