@@ -3,7 +3,7 @@ import InitPageHeader from '../components/InitPage/InitPageHeader';
 
 export default function InitPage(): JSX.Element {
   return (
-    <div>
+    <div className="InitPage">
       <InitPageHeader />
     </div>
   );
