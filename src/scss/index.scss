@@ -4,3 +4,11 @@
 * {
   box-sizing: border-box;
 }
+
+html,
+body,
+#root,
+.App,
+.InitPage {
+  height: 100%;
+}
