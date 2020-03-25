@@ -1,5 +1,7 @@
 import React from 'react';
 
+import InitPageEmailInput from './InitPageEmailInput';
+
 export default function InitPageHeader(): JSX.Element {
   return (
     <div className="InitPageHeader">
@@ -13,6 +15,7 @@ export default function InitPageHeader(): JSX.Element {
           <div className="text1">영화, TV 프로그램을</div>
           <div className="text2">무제한으로.</div>
           <div className="text3">다양한 디바이스에서 시청하세요. 언제든 해지하실 수 있습니다.</div>
+          <InitPageEmailInput />
         </div>
       </div>
     </div>
