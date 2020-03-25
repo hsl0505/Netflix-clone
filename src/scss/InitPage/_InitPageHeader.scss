@@ -1,10 +1,12 @@
 .InitPageHeader {
-  height: 100%;
+  height: 85%;
 
   .backImg {
     background-image: url('../../asset/init_background.jpg');
     background-size: cover;
-    height: 85%;
+    opacity: 0.9;
+    height: 100%;
+    border-bottom: 0.5rem solid #424242;
     .logoLogin {
       display: flex;
       justify-content: space-between;
@@ -34,6 +36,11 @@
         font-weight: bold;
       }
       .text2 {
+        margin-top: 2rem;
+      }
+      .text3 {
+        color: white;
+        font-size: 1.5rem;
         margin-top: 2rem;
       }
     }
