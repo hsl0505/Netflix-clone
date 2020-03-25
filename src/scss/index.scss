@@ -1,5 +1,7 @@
 @import './_reset.scss';
 @import './InitPage/_InitPageHeader.scss';
+@import './InitPage/InitPageEmailInput';
+@import './InitPage//InitPageContent';
 
 * {
   box-sizing: border-box;
@@ -11,4 +13,9 @@ body,
 .App,
 .InitPage {
   height: 100%;
+  width: 100%;
+}
+
+.InitPage {
+  background-color: black;
 }
