@@ -1,0 +1,29 @@
+.InitPageQnA {
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  background-color: black;
+  border-bottom: 0.5rem solid #424242;
+
+  .title {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5rem;
+  }
+
+  .QnAboxes {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  .InitPageEmailInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
