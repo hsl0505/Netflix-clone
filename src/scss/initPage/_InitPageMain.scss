@@ -1,0 +1,109 @@
+.InitPageMain {
+  width: 100%;
+  height: 85%;
+  background-image: url('../../asset/init_background.jpg');
+  background-size: cover;
+  border-bottom: 0.5rem solid #424242;
+
+  .header {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      color: red;
+      font-size: 3rem;
+      font-weight: bold;
+      margin-left: 3rem;
+      margin-top: 1rem;
+    }
+
+    .loginLink {
+      width: 4%;
+      height: 48%;
+      margin-top: 1.8rem;
+      margin-right: 3.2rem;
+      .loginBtn {
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-size: 1rem;
+        background-color: red;
+        border: none;
+        outline: none;
+        border-radius: 0.2rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .mainText {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    top: 17%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .mainText_1 {
+      color: white;
+      text-align: center;
+      font-size: 4rem;
+      font-weight: bold;
+      width: 30%;
+      line-height: 6rem;
+    }
+    .mainText_2 {
+      margin-top: 1rem;
+      color: white;
+      text-align: center;
+      font-size: 1.6rem;
+      width: 31%;
+      line-height: 2.5rem;
+    }
+
+    .InitPageEmailInput {
+      height: 15%;
+      width: 43%;
+      margin-top: 2rem;
+      display: flex;
+
+      .InitPageEmailInput_form {
+        height: 100%;
+        width: 65%;
+        .emailInput {
+          height: 100%;
+          width: 100%;
+          background-color: white;
+
+          .MuiInputLabel-formControl {
+            top: 12%;
+          }
+          .MuiInputBase-root {
+            background-color: white;
+            height: 100%;
+          }
+        }
+      }
+      .emailInputBtn {
+        height: 100%;
+        margin-left: 0.02rem;
+        width: 35%;
+        color: white;
+        font-size: 1.8rem;
+        outline: none;
+        border: none;
+        background-color: red;
+        cursor: pointer;
+      }
+    }
+
+    .mainText_3 {
+      color: white;
+      margin-top: 1.5rem;
+      font-size: 1.3rem;
+    }
+  }
+}
