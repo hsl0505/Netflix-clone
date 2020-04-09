@@ -1,14 +1,17 @@
 import React from 'react';
-import InitPageHeader from '../components/InitPage/InitPageHeader';
-import InitPageContent from '../components/InitPage/InitPageContent';
-import InitPageQnA from '../components/InitPage/InitPageQnA';
+
+import InitPageMain from '../components/initPage/IntiPageMain';
+import InitPageContents from '../components/initPage/InitPageContents';
+import InitPageQnA from '../components/initPage/InitPageQnA';
+import InitPageFooter from '../components/initPage/InitPageFooter';
 
 export default function InitPage(): JSX.Element {
   return (
     <div className="InitPage">
-      <InitPageHeader />
-      <InitPageContent />
+      <InitPageMain />
+      <InitPageContents />
       <InitPageQnA />
+      <InitPageFooter />
     </div>
   );
 }
