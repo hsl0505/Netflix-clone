@@ -10,13 +10,15 @@ const mapStateToProps = ({ emailCheck }: State): StateProps => ({
   errMsg: emailCheck.errMsg,
 });
 
+type StateProps = { email: string; errMsg: string };
+
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   changeEmailInput: (email: string): object => dispatch(changeEmailInput(email)),
 });
 
-type Props = StateProps & DispatchProps;
-type StateProps = { email: string; errMsg: string };
 type DispatchProps = { changeEmailInput: Function };
+
+type Props = StateProps & DispatchProps;
 
 class InitPageEmailInputContainer extends Component<Props> {
   handleInput = (email: string): void => {
