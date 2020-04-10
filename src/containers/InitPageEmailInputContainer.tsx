@@ -5,14 +5,17 @@ import InitPageEmailInput from '../components/initPage/InitPageEmailInput';
 import { State } from '../store/modules';
 import { changeEmailInput } from '../store/modules/emailCheck';
 
-const mapStateToProps = ({ emailCheck }: State): StateProps => ({ email: emailCheck.email });
+const mapStateToProps = ({ emailCheck }: State): StateProps => ({
+  email: emailCheck.email,
+  errMsg: emailCheck.errMsg,
+});
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   changeEmailInput: (email: string): object => dispatch(changeEmailInput(email)),
 });
 
 type Props = StateProps & DispatchProps;
-type StateProps = { email: string };
+type StateProps = { email: string; errMsg: string };
 type DispatchProps = { changeEmailInput: Function };
 
 class InitPageEmailInputContainer extends Component<Props> {
@@ -22,8 +25,8 @@ class InitPageEmailInputContainer extends Component<Props> {
   };
 
   render(): JSX.Element {
-    const { email } = this.props;
-    return <InitPageEmailInput handleInput={this.handleInput} email={email} />;
+    const { email, errMsg } = this.props;
+    return <InitPageEmailInput handleInput={this.handleInput} email={email} errMsg={errMsg} />;
   }
 }
 
