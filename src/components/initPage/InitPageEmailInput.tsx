@@ -5,14 +5,18 @@ import { TextField } from '@material-ui/core';
 interface Props {
   handleInput: Function;
   email: string;
+  errMsg: string;
 }
 
 export default function InitPageEmailInput(props: Props): JSX.Element {
-  const { handleInput, email } = props;
+  const { handleInput, email, errMsg } = props;
 
   return (
-    <div className="InitPageEmailInput">
-      <form className="InitPageEmailInput_form">
+    <div
+      className="InitPageEmailInput"
+      style={{ marginBottom: errMsg === '정확한 이메일을 입력하세요' ? '1.5rem' : '' }}
+    >
+      <div className="InitPageEmailInput_form">
         <TextField
           label="이메일 주소"
           multiline
@@ -23,7 +27,8 @@ export default function InitPageEmailInput(props: Props): JSX.Element {
           onChange={(e): void => handleInput(e.target.value)}
           value={email}
         />
-      </form>
+        <div className="errMsg">{errMsg === '정확한 이메일을 입력하세요' ? errMsg : ''}</div>
+      </div>
 
       <button type="button" className="emailInputBtn">
         30일 무료 이용 &gt;
