@@ -1,5 +1,111 @@
 .InitPageQnA {
   width: 100%;
-  height: 100%;
-  background-color: blue;
+  height: auto;
+  min-height: 100%;
+  background-color: black;
+  border-bottom: 0.5rem solid #424242;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .QnA_Title {
+    margin-top: 4rem;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .QnA_Boxes {
+    margin-top: 3%;
+    width: 45%;
+    height: 75%;
+
+    .InitPageQnABox {
+      margin-top: 0.6rem;
+      width: 100%;
+      height: 10%;
+      color: white;
+
+      .QnA_Box_Title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5rem;
+        cursor: pointer;
+        background-color: #2e2e2e;
+
+        .title_text {
+          font-size: 1.6rem;
+          margin-left: 2rem;
+        }
+        .title_plus {
+          font-size: 3rem;
+          margin-right: 2rem;
+        }
+      }
+      .QnA_Box_Ans {
+        width: 100%;
+        height: auto;
+        background-color: #2e2e2e;
+        margin-top: 0.1rem;
+        .ans_text {
+          margin-left: 2rem;
+          margin-right: 2rem;
+          padding-top: 2rem;
+          font-size: 1.6rem;
+          line-height: 2.5rem;
+          word-break: keep-all;
+        }
+      }
+    }
+  }
+
+  .InitPageEmailInput {
+    margin-top: 3.5rem;
+    height: 4rem;
+    width: 43%;
+    display: flex;
+
+    .InitPageEmailInput_form {
+      height: 4rem;
+      width: 65%;
+      .emailInput {
+        height: 4rem;
+        width: 100%;
+        background-color: white;
+
+        .MuiInputLabel-formControl {
+          top: 12%;
+        }
+        .MuiInputBase-root {
+          background-color: white;
+          height: 100%;
+        }
+      }
+    }
+
+    .errMsg {
+      margin-top: 1rem;
+      color: orange;
+    }
+
+    .emailInputBtn {
+      height: 4rem;
+      margin-left: 0.02rem;
+      width: 35%;
+      color: white;
+      font-size: 1.8rem;
+      outline: none;
+      border: none;
+      background-color: red;
+      cursor: pointer;
+    }
+  }
+
+  .QnA_emailText {
+    color: white;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 5rem;
+  }
 }
