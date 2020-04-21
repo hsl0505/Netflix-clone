@@ -20,7 +20,7 @@ export default function InitPageQnABox(props: Props): JSX.Element {
         <div className="title_text">{title}</div>
         <div className="title_plus">{showArr[id] === 1 ? '<' : '+'}</div>
       </div>
-      {showArr[id] === 1 ? <InitPageQnABoxAns content={content} /> : <div />}
+      {showArr[id] === 1 ? <InitPageQnABoxAns content={content} id={id} /> : <div />}
     </div>
   );
 }
