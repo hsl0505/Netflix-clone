@@ -6,10 +6,11 @@ interface Props {
   handleInput: Function;
   email: string;
   errMsg: string;
+  location: string;
 }
 
 export default function InitPageEmailInput(props: Props): JSX.Element {
-  const { handleInput, email, errMsg } = props;
+  const { handleInput, email, errMsg, location } = props;
 
   return (
     <div
@@ -24,7 +25,13 @@ export default function InitPageEmailInput(props: Props): JSX.Element {
           className="emailInput"
           InputProps={{ disableUnderline: true }}
           type="email"
-          onChange={(e): void => handleInput(e.target.value)}
+          onChange={(e): void => {
+            if (location === 'up') {
+              handleInput(e.target.value, 'up');
+            } else {
+              handleInput('down', e.target.value);
+            }
+          }}
           value={email}
         />
         <div className="errMsg">{errMsg === '정확한 이메일을 입력하세요' ? errMsg : ''}</div>

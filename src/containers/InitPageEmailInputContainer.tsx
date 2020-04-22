@@ -6,29 +6,57 @@ import { State } from '../store/modules';
 import { changeEmailInput } from '../store/modules/emailCheck';
 
 const mapStateToProps = ({ emailCheck }: State): StateProps => ({
-  email: emailCheck.email,
-  errMsg: emailCheck.errMsg,
+  emailUp: emailCheck.emailUp,
+  emailDown: emailCheck.emailDown,
+  errMsgUp: emailCheck.errMsgUp,
+  errMsgDown: emailCheck.errMsgDown,
 });
 
-type StateProps = { email: string; errMsg: string };
+type StateProps = { emailUp: string; emailDown: string; errMsgUp: string; errMsgDown: string };
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  changeEmailInput: (email: string): object => dispatch(changeEmailInput(email)),
+  changeEmailInput: (emailUp: string, emailDown: string): object =>
+    dispatch(changeEmailInput(emailUp, emailDown)),
 });
 
 type DispatchProps = { changeEmailInput: Function };
 
-type Props = StateProps & DispatchProps;
+interface ContainerProps {
+  location: string;
+}
+
+type Props = StateProps & DispatchProps & ContainerProps;
 
 class InitPageEmailInputContainer extends Component<Props> {
-  handleInput = (email: string): void => {
-    const { changeEmailInput: changeInput } = this.props;
-    changeInput(email);
+  handleInput = (emailUp: string, emailDown: string): void => {
+    const { changeEmailInput: changeInput, location } = this.props;
+    if (location === 'up') {
+      changeInput(emailUp, 'up');
+    } else {
+      changeInput('down', emailDown);
+    }
   };
 
   render(): JSX.Element {
-    const { email, errMsg } = this.props;
-    return <InitPageEmailInput handleInput={this.handleInput} email={email} errMsg={errMsg} />;
+    const { emailUp, emailDown, location, errMsgUp, errMsgDown } = this.props;
+    if (location === 'up') {
+      return (
+        <InitPageEmailInput
+          handleInput={this.handleInput}
+          email={emailUp}
+          errMsg={errMsgUp}
+          location={location}
+        />
+      );
+    }
+    return (
+      <InitPageEmailInput
+        handleInput={this.handleInput}
+        email={emailDown}
+        errMsg={errMsgDown}
+        location={location}
+      />
+    );
   }
 }
 
